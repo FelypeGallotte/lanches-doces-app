@@ -5,6 +5,7 @@ import TopButtons from "../components/TopButtons";
 import CategoryItem from "../components/CategoryItem";
 import ProductCard from "../components/ProductCard";
 import BottomNav from "../components/BottomNav";
+import Logo from '../components/Logo';
 
 const categories = [
   { title: "Salgados", image: require("../assets/salgados.png") },
@@ -36,6 +37,8 @@ const products = [
 export default function Main() {
   return (
     <Container>
+      <Logo />
+
       <ScrollView showsVerticalScrollIndicator={false}>
         <TopButtons />
 
