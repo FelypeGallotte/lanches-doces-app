@@ -5,13 +5,18 @@ import TopButtons from "../components/TopButtons";
 import CategoryItem from "../components/CategoryItem";
 import ProductCard from "../components/ProductCard";
 import BottomNav from "../components/BottomNav";
-import Logo from '../components/Logo';
+import Logo from "../components/Logo";
+
+import { useNavigation } from '@react-navigation/native';
+
+
 
 const categories = [
-  { title: "Salgados", image: require("../assets/salgados.png") },
-  { title: "Doces", image: require("../assets/doces.png") },
-  { title: "Bolos", image: require("../assets/bolos.png") },
+  { title: "Salgados", image: require("../assets/salgados.png"), screen: "Salgados" },
+  { title: "Doces", image: require("../assets/doces.png"), screen: "Doces" },
+  { title: "Bolos", image: require("../assets/bolos.png"), screen: "Bolos" },
 ];
+
 
 const products = [
   {
@@ -34,7 +39,9 @@ const products = [
   },
 ];
 
-export default function Main() {
+export default function Menu() {
+  const navigation = useNavigation();
+
   return (
     <Container>
       <Logo />
@@ -45,7 +52,12 @@ export default function Main() {
         <Title>Menu</Title>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
           {categories.map((item, index) => (
-            <CategoryItem key={index} title={item.title} image={item.image} />
+            <CategoryItem
+              key={index}
+              title={item.title}
+              image={item.image}
+              onPress={() => navigation.navigate(item.screen)}
+            />
           ))}
         </ScrollView>
 
@@ -61,3 +73,4 @@ export default function Main() {
     </Container>
   );
 }
+

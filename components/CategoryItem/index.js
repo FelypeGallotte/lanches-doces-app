@@ -1,11 +1,13 @@
 import React from "react";
-import { Container, ImageCircle, Label } from "./styles";
+import { Wrapper, Container, ImageCircle, Label } from "./styles";
 
-export default function CategoryItem({ title, image }) {
+export default function CategoryItem({ title, image, onPress }) {
   return (
-    <Container>
-      <ImageCircle source={image} />
-      <Label>{title}</Label>
-    </Container>
+    <Wrapper onPress={onPress}>
+      <Container>
+        <ImageCircle source={image} />
+        <Label>{title}</Label>
+      </Container>
+    </Wrapper>
   );
 }
