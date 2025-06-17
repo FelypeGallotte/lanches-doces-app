@@ -17,10 +17,18 @@ export const ProductImage = styled.Image`
   height: 100px;
 `;
 
-export const Brand = styled.Text`
-  color: gray;
-  font-size: 12px;
-  margin: 6px 8px 0px;
+export const BuyButton = styled.TouchableOpacity`
+  background-color:rgb(22, 22, 21);
+  padding: 10px;
+  margin: 10px 8px 12px;
+  border-radius: 8px;
+  align-items: center;
+`;
+
+export const BuyButtonText = styled.Text`
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
 `;
 
 export const ProductTitle = styled.Text`

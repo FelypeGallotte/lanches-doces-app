@@ -10,7 +10,7 @@ export const Btn = styled.TouchableOpacity`
   flex-direction: row;
   align-items: center;
   border: 1px solid #ccc;
-  padding: 6px 12px;
+  padding: 6px 55px;
   border-radius: 6px;
 `;
 

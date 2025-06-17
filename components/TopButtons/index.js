@@ -8,10 +8,6 @@ export default function TopButtons() {
 
   return (
     <Container>
-      <Btn onPress={() => console.log("Histórico ainda não implementado")}>
-        <Ionicons name="time" size={16} />
-        <BtnText>History</BtnText>
-      </Btn>
 
       <Btn onPress={() => navigation.navigate("Contact")}>
         <Ionicons name="person" size={16} />
