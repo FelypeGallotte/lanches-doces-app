@@ -11,7 +11,7 @@ import Doces from "./src/screens/Doces";
 import Bolos from "./src/screens/Bolos";
 import Notificacoes from "./src/screens/Notificacoes";
 import Carrinho from "./src/screens/Carrinho";
-
+import ListadeProdutos from "./src/screens/ListadeProdutos";
 
 const Stack = createNativeStackNavigator();
 
@@ -27,6 +27,7 @@ export default function App() {
         <Stack.Screen name="Bolos" component={Bolos} />
         <Stack.Screen name="Notificacoes" component={Notificacoes} />
         <Stack.Screen name="Carrinho" component={Carrinho} />
+        <Stack.Screen name="ListadeProdutos" component={ListadeProdutos} />
         
       </Stack.Navigator>
     </NavigationContainer>

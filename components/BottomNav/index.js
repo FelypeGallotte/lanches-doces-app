@@ -11,7 +11,7 @@ export default function BottomNav() {
         <Ionicons onPress={() => navigation.navigate("Main")} name="home" size={22} />
       </NavButton>
       <NavButton>
-        <Feather onPress={() => navigation.navigate("Carrinho")} name="shopping-cart" size={22} />
+        <Feather onPress={() => navigation.navigate("ListadeProdutos")} name="shopping-cart" size={22} />
       </NavButton>
       <NavButton>
         <Ionicons onPress={() => navigation.navigate("Notificacoes")} name="notifications-outline" size={22} />
