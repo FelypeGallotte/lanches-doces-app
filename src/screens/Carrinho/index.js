@@ -19,12 +19,12 @@ const handleFinalize = () => {
     return;
   }
 
-  // Mostra a mensagem de sucesso
+  
   ToastAndroid.show('Compra realizada com sucesso!', ToastAndroid.SHORT);
 
   setTimeout(() => { 
     const message = `Olá! Gostaria de comprar:\n\nProduto: ${selectedProduct.name}\nPreço: ${selectedProduct.price}\nForma de pagamento: ${payment}`;
-    const url = `https://wa.me/5579998010565?text=${encodeURIComponent(message)}`;
+    const url = `https://wa.me/5579912345678?text=${encodeURIComponent(message)}`; // Substitua pelo numero do whatsapp
 
     Linking.canOpenURL(url)
       .then((supported) => {
