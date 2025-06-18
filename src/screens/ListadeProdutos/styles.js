@@ -1,8 +1,11 @@
 import { StyleSheet } from 'react-native';
+import { Platform, StatusBar } from 'react-native'
+
+const isAndroid = Platform.OS === 'android';
 
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 20, backgroundColor: "#fff" },
-  titulo: { fontSize: 26, fontWeight: "bold", marginBottom: 20, color: "black" },
+  titulo: { fontSize: 26, fontWeight: "bold", marginBottom: 20, color: "black", marginTop: isAndroid ? StatusBar.currentHeight : 0 },
   card: {
     flexDirection: "row",
     alignItems: "center",
